@@ -1,7 +1,9 @@
+import Hero from "./components/Hero";
+
 function App() {
   return (
-    <main>
-      <h1>Hello Mahreen Indonesia</h1>
+    <main className="bg-slate-950 text-white overflow-hidden">
+      <Hero />
     </main>
   );
 }
