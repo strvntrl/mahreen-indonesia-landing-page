@@ -16,7 +16,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           className="inline-block px-4 py-2 rounded-full border border-white/10 bg-white/5"
         >
-          🚀 Mahreen Indonesia
+          Mahreen Indonesia
         </motion.span>
 
         <motion.h1
