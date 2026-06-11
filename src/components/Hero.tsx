@@ -26,7 +26,7 @@ export default function Hero() {
           className="mt-8 text-5xl md:text-7xl font-bold leading-tight"
         >
           Berkarya Dengan
-          <span className="block bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+          <span className="block bg-linear-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
             Kreativitas & Teknologi
           </span>
         </motion.h1>
