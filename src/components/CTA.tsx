@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
     <section
       id="cta"
-      className="relative px-6 py-24"
+      className="relative px-6 py-32"
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
@@ -27,89 +28,104 @@ export default function CTA() {
           "
         >
           {/* Glow Background */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-72 h-72 bg-blue-500/20 blur-[120px] rounded-full" />
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-20 left-1/4 w-80 h-80 bg-red-500/20 blur-[140px] rounded-full" />
 
-            <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-violet-500/20 blur-[120px] rounded-full" />
+            <div className="absolute -bottom-20 right-1/4 w-80 h-80 bg-blue-500/15 blur-[140px] rounded-full" />
           </div>
 
           <div className="relative z-10">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-6">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            <div
+              className="
+                inline-flex
+                items-center
+                gap-2
+                px-4
+                py-2
+                rounded-full
+                border
+                border-white/10
+                bg-white/5
+                backdrop-blur-xl
+              "
+            >
+              <span>🇮🇩</span>
+
               <span className="text-sm text-slate-300">
-                Pendaftaran Dibuka
+                Pendaftaran Mahreen Indonesia Dibuka
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-              Saatnya Berkarya
-              <span className="block bg-linear-to-r from-blue-400 via-cyan-400 to-violet-400 bg-clip-text text-transparent">
-                Untuk Indonesia
+            <h2 className="mt-8 text-4xl md:text-6xl font-bold leading-tight">
+              Indonesia Membutuhkan
+              <span className="block bg-linear-to-r from-red-400 via-white to-red-400 bg-clip-text text-transparent">
+                Karya dan Inovasimu
               </span>
             </h2>
 
             {/* Description */}
             <p className="mt-6 max-w-3xl mx-auto text-slate-300 text-lg leading-relaxed">
-              Bergabunglah bersama Mahreen Indonesia dan jadilah bagian dari
-              generasi muda yang menciptakan perubahan melalui kreativitas,
-              teknologi, dan kolaborasi.
+              Jangan hanya menyaksikan perubahan terjadi. Jadilah bagian dari
+              generasi muda yang berani mengambil langkah, mengembangkan
+              kreativitas, memanfaatkan teknologi, dan menciptakan solusi yang
+              berdampak bagi masa depan Indonesia.
             </p>
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-semibold flex items-center justify-center gap-2 transition">
+              <Link
+                to="/register"
+                className="
+                  group
+                  bg-linear-to-r
+                  from-red-500
+                  to-red-600
+                  px-8
+                  py-4
+                  rounded-xl
+                  font-semibold
+                  flex
+                  items-center
+                  justify-center
+                  gap-2
+                  hover:scale-105
+                  transition
+                "
+              >
                 Daftar Sekarang
 
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition"
                 />
-              </button>
+              </Link>
 
-              <button className="border border-white/10 hover:bg-white/5 px-8 py-4 rounded-xl font-medium transition">
-                Pelajari Lebih Lanjut
-              </button>
+              <Link
+                to="/program"
+                className="
+                  border
+                  border-white/10
+                  hover:bg-white/5
+                  px-8
+                  py-4
+                  rounded-xl
+                  font-medium
+                  transition
+                "
+              >
+                Pelajari Program
+              </Link>
             </div>
 
-            {/* Bottom Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-14 pt-10 border-t border-white/10">
-              <div>
-                <h3 className="text-3xl font-bold text-blue-400">
-                  500+
-                </h3>
-                <p className="text-slate-400 text-sm mt-1">
-                  Peserta Aktif
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-bold text-violet-400">
-                  50+
-                </h3>
-                <p className="text-slate-400 text-sm mt-1">
-                  Program Kreatif
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-bold text-cyan-400">
-                  20+
-                </h3>
-                <p className="text-slate-400 text-sm mt-1">
-                  Kota Indonesia
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-bold text-green-400">
-                  95%
-                </h3>
-                <p className="text-slate-400 text-sm mt-1">
-                  Kepuasan Peserta
-                </p>
-              </div>
+            {/* Quote */}
+            <div className="mt-14 pt-10 border-t border-white/10">
+              <p className="text-slate-400 italic max-w-2xl mx-auto leading-relaxed">
+                "Perubahan besar dimulai dari satu langkah kecil. Mari
+                berkarya, berinovasi, dan bersama membangun Indonesia yang
+                lebih baik."
+              </p>
             </div>
           </div>
         </motion.div>

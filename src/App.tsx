@@ -1,17 +1,15 @@
-import Hero from "./components/Hero";
-import About from "./components/About";
-import CTA from "./components/CTA";
-import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import LandingPage from "./pages/LandingPage";
+import Program from "./pages/Program";
+import Register from "./pages/Register";
+
+export default function App() {
   return (
-    <main className="bg-slate-950 text-white overflow-hidden">
-      <Navbar />
-      <Hero />
-      <About />
-      <CTA />
-    </main>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/program" element={<Program />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
   );
 }
-
-export default App;

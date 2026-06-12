@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
@@ -8,7 +8,7 @@ export default function Navbar() {
   const links = [
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
-    { label: "Daftar", href: "#cta" },
+    { label: "Contact", href: "#cta" },
   ];
 
   return (
@@ -17,7 +17,7 @@ export default function Navbar() {
         <nav
           className="
             backdrop-blur-xl
-            bg-white/5
+            bg-slate-950/70
             border
             border-white/10
             rounded-2xl
@@ -26,6 +26,8 @@ export default function Navbar() {
             flex
             items-center
             justify-between
+            shadow-lg
+            shadow-black/20
           "
         >
           {/* Logo */}
@@ -37,20 +39,22 @@ export default function Navbar() {
           >
             <div
               className="
-                w-10
-                h-10
+                w-11
+                h-11
                 rounded-xl
                 bg-linear-to-br
-                from-blue-500
-                to-violet-500
+                from-red-500
+                to-red-600
                 flex
                 items-center
                 justify-center
                 font-bold
                 text-white
+                shadow-lg
+                shadow-red-500/20
               "
             >
-              M
+              🇮🇩
             </div>
 
             <div>
@@ -99,6 +103,35 @@ export default function Navbar() {
             ))}
           </div>
 
+          {/* Desktop CTA */}
+          <a
+            href="#cta"
+            className="
+              hidden
+              md:flex
+              items-center
+              gap-2
+              px-5
+              py-2.5
+              rounded-xl
+              bg-linear-to-r
+              from-red-500
+              to-red-600
+              font-medium
+              hover:scale-105
+              transition
+              shadow-lg
+              shadow-red-500/20
+            "
+          >
+            Daftar
+
+            <ArrowRight
+              size={16}
+              className="transition"
+            />
+          </a>
+
           {/* Mobile Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -119,16 +152,25 @@ export default function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
+              initial={{
+                opacity: 0,
+                y: -15,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                y: -15,
+              }}
               className="
                 md:hidden
                 mt-3
                 rounded-2xl
                 border
                 border-white/10
-                bg-slate-900/80
+                bg-slate-900/90
                 backdrop-blur-xl
                 overflow-hidden
               "
@@ -141,7 +183,7 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className="
                       py-3
-                      px-2
+                      px-3
                       rounded-lg
                       text-slate-300
                       hover:text-white
@@ -152,6 +194,28 @@ export default function Navbar() {
                     {link.label}
                   </a>
                 ))}
+
+                <a
+                  href="#cta"
+                  onClick={() => setIsOpen(false)}
+                  className="
+                    mt-3
+                    flex
+                    items-center
+                    justify-center
+                    gap-2
+                    bg-linear-to-r
+                    from-red-500
+                    to-red-600
+                    py-3
+                    rounded-xl
+                    font-medium
+                  "
+                >
+                  Daftar Sekarang
+
+                  <ArrowRight size={16} />
+                </a>
               </div>
             </motion.div>
           )}
