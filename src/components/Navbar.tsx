@@ -37,34 +37,8 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             className="flex items-center gap-3"
           >
-            <div
-              className="
-                w-11
-                h-11
-                rounded-xl
-                bg-linear-to-br
-                from-red-500
-                to-red-600
-                flex
-                items-center
-                justify-center
-                font-bold
-                text-white
-                shadow-lg
-                shadow-red-500/20
-              "
-            >
-              🇮🇩
-            </div>
-
             <div>
-              <h1 className="font-bold text-white leading-none">
-                Mahreen
-              </h1>
-
-              <p className="text-xs text-slate-400">
-                Indonesia
-              </p>
+              <h1 className="font-bold text-xl text-white leading-none">Mahreen Indonesia</h1>
             </div>
           </motion.a>
 
@@ -125,11 +99,7 @@ export default function Navbar() {
             "
           >
             Daftar
-
-            <ArrowRight
-              size={16}
-              className="transition"
-            />
+            <ArrowRight size={16} className="transition" />
           </a>
 
           {/* Mobile Button */}
@@ -213,7 +183,6 @@ export default function Navbar() {
                   "
                 >
                   Daftar Sekarang
-
                   <ArrowRight size={16} />
                 </a>
               </div>

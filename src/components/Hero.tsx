@@ -28,10 +28,10 @@ export default function Hero() {
                 backdrop-blur-xl
               "
             >
+              <span className="text-sm text-slate-300">Mahreen Indonesia</span>
               <span className="w-2 h-2 rounded-full bg-red-400" />
-
               <span className="text-sm text-slate-300">
-                Mahreen Indonesia • Generasi Muda Berkarya
+                Generasi Muda Berkarya
               </span>
             </motion.div>
 
@@ -41,25 +41,26 @@ export default function Hero() {
               transition={{ delay: 0.2 }}
               className="
                 mt-8
-                text-5xl
-                md:text-6xl
-                xl:text-7xl
+                text-3xl
+                md:text-4xl
+                xl:text-5xl
                 font-bold
                 leading-tight
               "
             >
-              Generasi Muda,
-              <span className="block text-white">
-                Berkarya Untuk
-              </span>
-
+              Empowering <span className="text-blue-400">Youth</span>
+              ,
+              <br />
+              Creating <span className="text-violet-400">Innovation</span>
+              ,
+              <br />
+              Shaping{" "}
               <span
                 className="
-                  block
                   bg-linear-to-r
-                  from-red-400
+                  from-red-500
                   via-white
-                  to-red-400
+                  to-red-500
                   bg-clip-text
                   text-transparent
                 "
@@ -80,10 +81,10 @@ export default function Hero() {
                 leading-relaxed
               "
             >
-              Mahreen Indonesia mengajak generasi muda untuk
-              mengembangkan kreativitas, memanfaatkan teknologi,
-              dan berkolaborasi menciptakan inovasi yang memberikan
-              dampak nyata bagi masyarakat serta masa depan Indonesia.
+              Mahreen Indonesia mengajak generasi muda untuk mengembangkan
+              kreativitas, memanfaatkan teknologi, dan berkolaborasi menciptakan
+              inovasi yang memberikan dampak nyata bagi masyarakat serta masa
+              depan Indonesia.
             </motion.p>
 
             {/* CTA */}
@@ -114,7 +115,6 @@ export default function Hero() {
                 "
               >
                 Daftar Sekarang
-
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition"
@@ -139,11 +139,11 @@ export default function Hero() {
             </motion.div>
 
             {/* Statistics */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="
             grid
             grid-cols-2
             md:grid-cols-4
@@ -151,47 +151,31 @@ export default function Hero() {
             mt-20
             text-center
           "
-        >
-          <div>
-            <h4 className="text-4xl font-bold text-red-400">
-              500+
-            </h4>
+            >
+              <div>
+                <h4 className="text-4xl font-bold text-red-400">500+</h4>
 
-            <p className="mt-2 text-slate-400">
-              Peserta Aktif
-            </p>
-          </div>
+                <p className="mt-2 text-slate-400">Peserta Aktif</p>
+              </div>
 
-          <div>
-            <h4 className="text-4xl font-bold text-blue-400">
-              50+
-            </h4>
+              <div>
+                <h4 className="text-4xl font-bold text-blue-400">50+</h4>
 
-            <p className="mt-2 text-slate-400">
-              Program Kreatif
-            </p>
-          </div>
+                <p className="mt-2 text-slate-400">Program Kreatif</p>
+              </div>
 
-          <div>
-            <h4 className="text-4xl font-bold text-violet-400">
-              34
-            </h4>
+              <div>
+                <h4 className="text-4xl font-bold text-violet-400">34</h4>
 
-            <p className="mt-2 text-slate-400">
-              Provinsi
-            </p>
-          </div>
+                <p className="mt-2 text-slate-400">Provinsi</p>
+              </div>
 
-          <div>
-            <h4 className="text-4xl font-bold text-green-400">
-              95%
-            </h4>
+              <div>
+                <h4 className="text-4xl font-bold text-green-400">95%</h4>
 
-            <p className="mt-2 text-slate-400">
-              Kepuasan Peserta
-            </p>
-          </div>
-        </motion.div>
+                <p className="mt-2 text-slate-400">Kepuasan Peserta</p>
+              </div>
+            </motion.div>
           </div>
 
           {/* Right Content */}
@@ -212,9 +196,7 @@ export default function Hero() {
               "
             >
               <div className="flex items-center justify-between">
-                <h3 className="font-semibold text-xl">
-                  Pilar Program
-                </h3>
+                <h3 className="font-semibold text-xl">Pilar Program</h3>
 
                 <span
                   className="
@@ -235,9 +217,7 @@ export default function Hero() {
                   <Lightbulb className="text-yellow-400" />
 
                   <div>
-                    <h4 className="font-medium">
-                      Kreativitas
-                    </h4>
+                    <h4 className="font-medium">Kreativitas</h4>
 
                     <p className="text-slate-400 text-sm">
                       Mengubah ide menjadi karya yang bermanfaat.
@@ -249,9 +229,7 @@ export default function Hero() {
                   <Laptop className="text-cyan-400" />
 
                   <div>
-                    <h4 className="font-medium">
-                      Teknologi
-                    </h4>
+                    <h4 className="font-medium">Teknologi</h4>
 
                     <p className="text-slate-400 text-sm">
                       Memanfaatkan teknologi untuk menciptakan inovasi.
@@ -263,9 +241,7 @@ export default function Hero() {
                   <Users className="text-violet-400" />
 
                   <div>
-                    <h4 className="font-medium">
-                      Kolaborasi
-                    </h4>
+                    <h4 className="font-medium">Kolaborasi</h4>
 
                     <p className="text-slate-400 text-sm">
                       Bersama membangun masa depan Indonesia.
@@ -293,7 +269,7 @@ export default function Hero() {
               "
             >
               <p className="text-sm text-slate-300">
-                🇮🇩 Terhubung di 34 Provinsi
+                Terhubung di 34 Provinsi
               </p>
             </div>
 
@@ -314,7 +290,7 @@ export default function Hero() {
               "
             >
               <p className="text-sm text-slate-300">
-                🚀 Kreativitas • Teknologi • Kolaborasi
+                Kreativitas • Teknologi • Kolaborasi
               </p>
             </div>
           </motion.div>

@@ -1,4 +1,13 @@
 @import "tailwindcss";
+@import url('https://googleapis.com');
+
+@theme {
+  --font-playfair: "Playfair Display", serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
 
 html {
   scroll-behavior: smooth;

@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
-    <section
-      id="cta"
-      className="relative px-6 py-32"
-    >
+    <section id="cta" className="relative px-6 py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -50,9 +47,7 @@ export default function CTA() {
                 backdrop-blur-xl
               "
             >
-              <span>🇮🇩</span>
-
-              <span className="text-sm text-slate-300">
+              <span className="text-xl text-slate-300">
                 Pendaftaran Mahreen Indonesia Dibuka
               </span>
             </div>
@@ -95,7 +90,6 @@ export default function CTA() {
                 "
               >
                 Daftar Sekarang
-
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition"
@@ -122,9 +116,8 @@ export default function CTA() {
             {/* Quote */}
             <div className="mt-14 pt-10 border-t border-white/10">
               <p className="text-slate-400 italic max-w-2xl mx-auto leading-relaxed">
-                "Perubahan besar dimulai dari satu langkah kecil. Mari
-                berkarya, berinovasi, dan bersama membangun Indonesia yang
-                lebih baik."
+                "Perubahan besar dimulai dari satu langkah kecil. Mari berkarya,
+                berinovasi, dan bersama membangun Indonesia yang lebih baik."
               </p>
             </div>
           </div>

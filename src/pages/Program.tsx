@@ -32,12 +32,142 @@ const programs = [
 
 export default function Program() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      {/* Background */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-500/10 blur-[150px] rounded-full" />
+    <div className="min-h-screen bg-transparent text-white">
+      {/* Background Base */}
+      <div className="fixed inset-0 -z-50 bg-slate-950" />
 
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 blur-[150px] rounded-full" />
+      {/* Aurora */}
+      <div className="fixed inset-0 -z-40 overflow-hidden pointer-events-none">
+        <div
+          className="
+        absolute
+        -top-50
+        -left-50
+        w-175
+        h-175
+        rounded-full
+        bg-violet-600/30
+        blur-3xl
+      "
+        />
+
+        <div
+          className="
+        absolute
+        top-25
+        -right-50
+        w-175
+        h-175
+        rounded-full
+        bg-blue-500/25
+        blur-3xl
+      "
+        />
+
+        <div
+          className="
+        absolute
+        -bottom-62.5
+        left-1/2
+        -translate-x-1/2
+        w-225
+        h-225
+        rounded-full
+        bg-red-500/15
+        blur-3xl
+      "
+        />
+      </div>
+
+      {/* Grid */}
+      <div
+        className="
+      fixed
+      inset-0
+      -z-30
+      opacity-20
+      bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)]
+      bg-size-[50px_50px]
+    "
+      />
+
+      {/* Large Circles */}
+      <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none">
+        <div
+          className="
+        absolute
+        top-20
+        right-32
+        w-72
+        h-72
+        rounded-full
+        border
+        border-violet-400/20
+      "
+        />
+
+        <div
+          className="
+        absolute
+        bottom-20
+        left-20
+        w-96
+        h-96
+        rounded-full
+        border
+        border-blue-400/10
+      "
+        />
+      </div>
+
+      {/* Floating Shapes */}
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div
+          className="
+        absolute
+        top-32
+        left-10
+        w-20
+        h-20
+        rounded-3xl
+        rotate-12
+        bg-white/5
+        border
+        border-white/10
+        backdrop-blur-xl
+      "
+        />
+
+        <div
+          className="
+        absolute
+        top-72
+        right-16
+        w-16
+        h-16
+        rounded-2xl
+        -rotate-12
+        bg-white/5
+        border
+        border-white/10
+        backdrop-blur-xl
+      "
+        />
+
+        <div
+          className="
+        absolute
+        bottom-32
+        right-12
+        w-24
+        h-24
+        rounded-full
+        bg-white/5
+        border
+        border-white/10
+        backdrop-blur-xl
+      "
+        />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-24">
@@ -76,10 +206,7 @@ export default function Program() {
               bg-white/5
             "
           >
-            🇮🇩
-            <span className="text-sm text-slate-300">
-              Mahreen Indonesia
-            </span>
+            <span className="text-xl text-slate-300">Mahreen Indonesia</span>
           </div>
 
           <h1 className="mt-8 text-5xl md:text-6xl font-bold">
@@ -114,9 +241,7 @@ export default function Program() {
                 {program.icon}
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">
-                {program.title}
-              </h3>
+              <h3 className="text-2xl font-semibold mb-4">{program.title}</h3>
 
               <p className="text-slate-400 leading-relaxed">
                 {program.description}
@@ -127,9 +252,7 @@ export default function Program() {
 
         {/* Program Journey */}
         <div className="mt-24">
-          <h2 className="text-4xl font-bold text-center">
-            Alur Program
-          </h2>
+          <h2 className="text-4xl font-bold text-center">Alur Program</h2>
 
           <div className="grid md:grid-cols-3 gap-8 mt-14">
             <div className="text-center">
@@ -137,9 +260,7 @@ export default function Program() {
                 <Rocket className="text-red-400" size={32} />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Belajar
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Belajar</h3>
 
               <p className="mt-3 text-slate-400">
                 Mendapatkan wawasan dan keterampilan baru melalui berbagai
@@ -152,9 +273,7 @@ export default function Program() {
                 <Lightbulb className="text-blue-400" size={32} />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Berkarya
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Berkarya</h3>
 
               <p className="mt-3 text-slate-400">
                 Mengembangkan ide menjadi karya atau solusi yang memiliki
@@ -167,13 +286,11 @@ export default function Program() {
                 <Award className="text-green-400" size={32} />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">
-                Berdampak
-              </h3>
+              <h3 className="mt-6 text-xl font-semibold">Berdampak</h3>
 
               <p className="mt-3 text-slate-400">
-                Memberikan kontribusi positif bagi lingkungan, masyarakat,
-                dan masa depan Indonesia.
+                Memberikan kontribusi positif bagi lingkungan, masyarakat, dan
+                masa depan Indonesia.
               </p>
             </div>
           </div>

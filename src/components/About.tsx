@@ -46,10 +46,7 @@ const values = [
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="relative py-32 px-6"
-    >
+    <section id="about" className="relative py-32 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -63,7 +60,7 @@ export default function About() {
             className="
               inline-flex
               items-center
-              gap-2
+              gap-1
               px-4
               py-2
               rounded-full
@@ -73,11 +70,7 @@ export default function About() {
               backdrop-blur-xl
             "
           >
-            <span>🇮🇩</span>
-
-            <span className="text-sm text-slate-300">
-              Tentang Program
-            </span>
+            <span className="text-xl text-slate-300">Tentang Program</span>
           </div>
 
           <h2 className="mt-6 text-4xl md:text-5xl font-bold">
@@ -147,13 +140,9 @@ export default function About() {
                   {item.icon}
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4">
-                  {item.title}
-                </h3>
+                <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
 
-                <p className="text-slate-400 leading-relaxed">
-                  {item.desc}
-                </p>
+                <p className="text-slate-400 leading-relaxed">{item.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -200,17 +189,11 @@ export default function About() {
                   bg-slate-900/40
                 "
               >
-                <div className="text-red-400 mb-4">
-                  {item.icon}
-                </div>
+                <div className="text-red-400 mb-4">{item.icon}</div>
 
-                <h4 className="text-xl font-semibold mb-3">
-                  {item.title}
-                </h4>
+                <h4 className="text-xl font-semibold mb-3">{item.title}</h4>
 
-                <p className="text-slate-400">
-                  {item.desc}
-                </p>
+                <p className="text-slate-400">{item.desc}</p>
               </div>
             ))}
           </div>
